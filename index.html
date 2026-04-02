@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Туристический гид по ВКО</title>
+    
+    <!-- PWA НАСТРОЙКИ (ДОБАВЛЕНО) -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <meta name="theme-color" content="#2d6a4f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="ВКО Тур">
+    
     <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet">
     <style>
         * {
@@ -296,5 +305,14 @@
 
     <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
     <script src="app.js"></script>
+    
+    <!-- Service Worker регистрация (ДОБАВЛЕНО) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(() => console.log('✅ Service Worker зарегистрирован'))
+                .catch(err => console.log('❌ Ошибка SW:', err));
+        }
+    </script>
 </body>
 </html>
