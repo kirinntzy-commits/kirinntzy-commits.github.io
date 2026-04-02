@@ -1,0 +1,9 @@
+{
+    "name": "Туристический гид по ВКО",
+    "short_name": "ВКО Тур",
+    "description": "Путеводитель по Восточно-Казахстанской области",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#2d6a4f",
+    "background_color": "#f5f5f5"
+}
